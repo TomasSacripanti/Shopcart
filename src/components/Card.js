@@ -5,7 +5,7 @@ export class Card extends Component {
     render() {
         return (
             <div className="card">
-                <img src="" alt=""/>
+                <img className="u-full-width" src={this.props.img} alt=""/>
                 <div className="info-card">
                     <h4></h4>
                     <p>Juan Pedro</p>
