@@ -23,6 +23,10 @@
 .card h4 {
     margin-bottom: 5px;
 }
+.card h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
 .info-card .precio {
     text-decoration: line-through;
     font-size: 18px;

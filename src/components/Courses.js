@@ -8,52 +8,71 @@ import imgCurso4 from '../images/curso4.jpg';
 import imgCurso5 from '../images/curso5.jpg';
 
 export class Courses extends Component {
+    handleClick = (e) => {
+        if (e.target.className.includes('agregar-carrito')) {
+            this.createCourseObject(e.target.parentElement.parentElement);
+        }
+    }
+
+    createCourseObject = (card) => {
+        const course = {
+            name: card.querySelector('.name').innerText,
+            image: card.querySelector('img').src,
+            author: card.querySelector('.author').innerText,
+            price: card.querySelector('.price').innerText,
+        }
+        this.props.addCourse(course);
+    }
+    
+
+
+
     render() {
         return (
-            <div id="lista-cursos" className="container">
+            <div onClick={this.handleClick} id="lista-cursos" className="container">
                 <h1 id="encabezado" className="encabezado">Cursos En Línea</h1>
                 <div className="row">
                     <div className="four columns">
-                        <Card img={imgCurso1}></Card>
+                        <Card name="HTML5, CSS3, JavaScript para Principiantes" id={1} img={imgCurso1}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso2}></Card>
+                        <Card name="Curso de Comida Vegetariana" id={2} img={imgCurso2}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso3}></Card>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="four columns">
-                        <Card img={imgCurso4}></Card>
-                    </div>
-                    <div className="four columns">
-                        <Card img={imgCurso5}></Card>
-                    </div>
-                    <div className="four columns">
-                        <Card img={imgCurso1}></Card>
+                        <Card name="Guitarra para Principiantes" id={3} img={imgCurso3}></Card>
                     </div>
                 </div>
                 <div className="row">
                     <div className="four columns">
-                        <Card img={imgCurso2}></Card>
+                        <Card name="Huerto en tu casa" id={4} img={imgCurso4}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso3}></Card>
+                        <Card name="Decoración con productos de tu hogar" id={5} img={imgCurso5}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso4}></Card>
+                        <Card name="Diseño Web para Principiantes" id={6} img={imgCurso1}></Card>
                     </div>
                 </div>
                 <div className="row">
                     <div className="four columns">
-                        <Card img={imgCurso5}></Card>
+                        <Card name="Comida Mexicana para principiantes" id={7} img={imgCurso2}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso1}></Card>
+                        <Card name="Estudio Musical en tu casa" id={8} img={imgCurso3}></Card>
                     </div>
                     <div className="four columns">
-                        <Card img={imgCurso2}></Card>
+                        <Card name="Cosecha tus propias frutas y verduras" id={9} img={imgCurso4}></Card>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="four columns">
+                        <Card name="Prepara galletas caseras" id={10} img={imgCurso5}></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card name="JavaScript Moderno con ES6" id={11} img={imgCurso1}></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card name="100 Recetas de Comida Natural" id={12} img={imgCurso2}></Card>
                     </div>
                 </div>
             </div>

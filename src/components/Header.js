@@ -28,7 +28,13 @@ export class Header extends Component {
                                                 <th></th>
                                             </tr>
                                         </thead>
-                                        <tbody></tbody>
+                                        <tbody>
+                                            { this.props.courses &&
+                                                <tr>
+                                                    <th>Hola Cursos!</th>
+                                                </tr>
+                                            }
+                                        </tbody>
                                     </table>
 
                                     <a href="#" id="vaciar-carrito" className="button u-full-width">Vaciar Carrito</a>

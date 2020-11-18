@@ -6,13 +6,26 @@ import Footer from './Footer';
 import Bar from './Bar';
 
 export class Logic extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            courses: null,
+        }
+    }
+    addCourse = (curso) => {
+        this.setState({
+            courses: [
+                curso,
+            ]
+        })
+    }
     render() {
         return (
             <>
-                <Header></Header>
+                <Header courses={this.state.courses} ></Header>
                 <Hero></Hero>
                 <Bar></Bar>
-                <Courses></Courses>
+                <Courses addCourse={this.addCourse}></Courses>
                 <Footer></Footer>
             </>
         )
