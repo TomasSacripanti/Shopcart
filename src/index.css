@@ -520,7 +520,7 @@ th {
   .three.columns                  { width: 22%;            }
   .four.columns                   { width: 30.6666666667%; }
   .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
+  .six.columns                    { width: 60%;            }
   .seven.columns                  { width: 56.6666666667%; }
   .eight.columns                  { width: 65.3333333333%; }
   .nine.columns                   { width: 74.0%;          }
@@ -743,7 +743,7 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: none; }
 ol {
   list-style: decimal inside; }
 ol, ul {

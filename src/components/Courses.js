@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Row from './Row';
+import Card from './Card';
 import './styles/Courses.css';
 
 export class Courses extends Component {
@@ -7,10 +7,39 @@ export class Courses extends Component {
         return (
             <div id="lista-cursos" className="container">
                 <h1 id="encabezado" className="encabezado">Cursos En Línea</h1>
-                <Row></Row>
-                <Row></Row>
-                <Row></Row>
-                <Row></Row>
+                <div className="row">
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                    <div className="four columns">
+                        <Card></Card>
+                    </div>
+                </div>
             </div>
         )
     }

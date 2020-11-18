@@ -8,3 +8,33 @@ header {
         text-align: left;
     }
 }
+
+.submenu {
+    position: relative;
+}
+#img-carrito {
+    cursor: pointer;
+}
+
+.submenu #carrito{
+    display: none;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.submenu:hover #carrito{
+    display: block;
+    
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}

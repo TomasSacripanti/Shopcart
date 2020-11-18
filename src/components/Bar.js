@@ -4,8 +4,8 @@ import './styles/Bar.css';
 export class Bar extends Component {
     render() {
         return (
-            <div class="barra">
-                <div class="container">
+            <div className="barra">
+                <div className="container">
                     <div className="row">
                         <div className="four columns icono icono1">
                             <p>20,000 Cursos en línea <br/>Explora los temas más recientes</p>

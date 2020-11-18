@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import './styles/Header.css';
+import imgCarrito from '../images/cart.png';
+import logo from '../images/logo.jpg';
 
 export class Header extends Component {
     render() {
         return (
-        <header id="header" class="header">
-            <div class="container">
-                <div class="row">
+        <header id="header" className="header">
+            <div className="container">
+                <div className="row">
                     <div className="four columns">
-                        <img src="" alt="Logotipo"/>
+                        <img src={logo} alt="Logotipo"/>
                     </div>
-                    <div class="two columns u-pull-right">
+                    <div className="two columns u-pull-right">
                         <ul>
-                            <li className="sub-menu">
-                                <img src="" id="img-carrito"/>
+                            <li className="submenu">
+                                <img src={imgCarrito} alt="Carrito" id="img-carrito"/>
                                 <div id="carrito">
 
-                                    <table id="lista-carrito" class="u-full-width">
+                                    <table id="lista-carrito" className="u-full-width">
                                         <thead>
                                             <tr>
                                                 <th>Imagen</th>
@@ -29,7 +31,7 @@ export class Header extends Component {
                                         <tbody></tbody>
                                     </table>
 
-                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    <a href="#" id="vaciar-carrito" className="button u-full-width">Vaciar Carrito</a>
                                 </div>
                             </li>
                         </ul>
