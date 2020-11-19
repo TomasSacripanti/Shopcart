@@ -11,7 +11,7 @@ export class Card extends Component {
                     <p className="author">Juan Pedro</p>
                     <img src={stars} alt="Puntuación"/>
                     <p>$200 <span className="price u-pull-right">$15</span></p>
-                    <a href="#/" className="u-full-width button-primary button input agregar-carrito" data-id={this.props.id}>Agregar al carrito</a>
+                    <button className="u-full-width button-primary button input agregar-carrito" data-id={this.props.id}>Agregar al carrito</button>
                 </div>
             </div>
         )

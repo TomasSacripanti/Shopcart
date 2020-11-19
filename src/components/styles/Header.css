@@ -32,9 +32,10 @@ header {
     
 }
 .vacio {
-    padding: 10px;
+    padding: 0 15px;
     background-color: crimson;
     text-align: center;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }

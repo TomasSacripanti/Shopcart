@@ -20,6 +20,7 @@ export class Courses extends Component {
             image: card.querySelector('img').src,
             author: card.querySelector('.author').innerText,
             price: card.querySelector('.price').innerText,
+            id: card.querySelector('button').dataset.id,
         }
         this.props.addCourse(course);
     }

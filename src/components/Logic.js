@@ -9,20 +9,28 @@ export class Logic extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            courses: null,
+            courses: '',
         }
     }
     addCourse = (curso) => {
         this.setState({
-            courses: [
-                curso,
-            ]
+            courses: [...this.state.courses, curso],
+        })
+    }
+    deleteCourse = (e) => {
+        const toDelete = e.target.parentElement.parentElement.dataset.id;
+        this.state.courses.forEach(curso => {
+            if(curso.id.toString() === toDelete) {
+                this.setState({
+                    courses: courses.splice()
+                })
+            }
         })
     }
     render() {
         return (
             <>
-                <Header courses={this.state.courses} ></Header>
+                <Header courses={this.state.courses} deleteCourse={this.deleteCourse} ></Header>
                 <Hero></Hero>
                 <Bar></Bar>
                 <Courses addCourse={this.addCourse}></Courses>

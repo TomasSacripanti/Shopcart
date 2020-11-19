@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/Header.css';
+import TableRow from './TableRow';
 import imgCarrito from '../images/cart.png';
 import logo from '../images/logo.jpg';
 
@@ -29,15 +30,14 @@ export class Header extends Component {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            { this.props.courses &&
-                                                <tr>
-                                                    <th>Hola Cursos!</th>
-                                                </tr>
+                                            { this.props.courses && this.props.courses.map((course) => {
+                                                return  <TableRow course={course} key={course.id} deleteCourse={this.props.deleteCourse} ></TableRow>
+                                            })
                                             }
                                         </tbody>
                                     </table>
 
-                                    <a href="#" id="vaciar-carrito" className="button u-full-width">Vaciar Carrito</a>
+                                    <button id="vaciar-carrito" className="button u-full-width">Vaciar Carrito</button>
                                 </div>
                             </li>
                         </ul>
