@@ -37,7 +37,7 @@ export class Header extends Component {
                                         </tbody>
                                     </table>
 
-                                    <button id="vaciar-carrito" className="button u-full-width">Vaciar Carrito</button>
+                                    <button onClick={this.props.clearAll} className="button u-full-width">Vaciar Carrito</button>
                                 </div>
                             </li>
                         </ul>

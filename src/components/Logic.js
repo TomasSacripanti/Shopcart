@@ -9,7 +9,7 @@ export class Logic extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            courses: '',
+            courses: [],
         }
     }
     addCourse = (course) => {
@@ -50,10 +50,15 @@ export class Logic extends Component {
             }
         })
     }
+    clearAll = () => {
+        this.setState({
+            courses: []
+        })
+    }
     render() {
         return (
             <>
-                <Header courses={this.state.courses} deleteCourse={this.deleteCourse} ></Header>
+                <Header courses={this.state.courses} deleteCourse={this.deleteCourse} clearAll={this.clearAll} ></Header>
                 <Hero></Hero>
                 <Bar></Bar>
                 <Courses addCourse={this.addCourse}></Courses>
