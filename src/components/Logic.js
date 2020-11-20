@@ -12,17 +12,40 @@ export class Logic extends Component {
             courses: '',
         }
     }
-    addCourse = (curso) => {
-        this.setState({
-            courses: [...this.state.courses, curso],
-        })
+    addCourse = (course) => {
+        if (this.state.courses) {
+            if( this.state.courses.some(courseItem => courseItem.name === course.name)) {
+                const cursos = this.state.courses.map(c => {
+                    if(c.name === course.name) {
+                        c.quantity += 1;
+                        return c;
+                    } else {
+                        return c;
+                    }
+                })
+                this.setState({
+                    courses: [...cursos],
+                })
+            } else {
+                this.setState({
+                    courses: [...this.state.courses, course],
+                })
+            }
+        } else {
+            this.setState({
+                courses: [course],
+            })
+        }
+
     }
     deleteCourse = (e) => {
         const toDelete = e.target.parentElement.parentElement.dataset.id;
         this.state.courses.forEach(curso => {
-            if(curso.id.toString() === toDelete) {
+            if (curso.id.toString() === toDelete) {
                 this.setState({
-                    courses: courses.splice()
+                    courses: this.state.courses.filter(crs => {
+                        return crs !== curso;
+                    }),
                 })
             }
         })

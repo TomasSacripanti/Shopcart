@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export class TableRow extends Component {
     render() {
-        const { name, image, author, price, id} = this.props.course;
+        const { name, image, quantity, price, id} = this.props.course;
         return (
             <tr data-id={id} >
                 <td>
@@ -12,10 +12,10 @@ export class TableRow extends Component {
                     <p>{name}</p>
                 </td>
                 <td>
-                    <p>{author}</p>
+                    <p>{price}</p>
                 </td>
                 <td>
-                    <p>{price}</p>
+                    <p>{quantity}</p>
                 </td>
                 <td>
                     <button onClick={this.props.deleteCourse} className="vacio">X</button>

@@ -30,8 +30,8 @@ export class Header extends Component {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            { this.props.courses && this.props.courses.map((course) => {
-                                                return  <TableRow course={course} key={course.id} deleteCourse={this.props.deleteCourse} ></TableRow>
+                                            { this.props.courses && this.props.courses.map((course, index) => {
+                                                return  <TableRow course={course} key={index} deleteCourse={this.props.deleteCourse} ></TableRow>
                                             })
                                             }
                                         </tbody>
